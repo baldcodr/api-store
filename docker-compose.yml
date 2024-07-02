@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    command: >
+      bash -c 'cp `$pwd`/.env /code'
+    ports:
+      - 8000:8000
+    volumes:
+      - /Users/davidakuma/projects/cred/:/code/cred/
+volumes:
+  cred:

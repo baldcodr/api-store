@@ -1,0 +1,13 @@
+infrastructure/.terraform/*
+infrastructure/.terraform/
+infrastructure/.terraform.lock.hcl
+infrastructure/terraform.tfstate
+infrastructure/terraform.tfstate.backup
+api/__pycache__/
+api/store/__pycache__/
+poetry.lock
+cred/*
+cred/
+tests/__pycache__
+ci/
+.env

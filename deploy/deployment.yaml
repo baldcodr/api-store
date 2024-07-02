@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-store-ci
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-store
+  template:
+    metadata:
+      labels:
+        app: api-store
+    spec:
+      serviceAccountName: api-store-service-account
+      containers:
+      - name: api-store-image
+        image: api-store-image:latest
+        ports:
+        - containerPort: 8000
+          hostPort: 80
+        volumeMounts:
+        - name: gcp-service-account
+          mountPath: /var/secrets/google
+          readOnly: true
+        envFrom:
+          - configMapRef:
+            name: app-variables
+      volumes:
+      - name: gcp-service-account
+        secret:
+          secretName: gcp-service-account
