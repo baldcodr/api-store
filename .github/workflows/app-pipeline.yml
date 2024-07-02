@@ -6,11 +6,13 @@ on:
     - main
     paths:
     - api/**
+    - deploy/**
   pull_request:
     branches:
     - main
     paths:
     - api/**
+    - deploy/**
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
