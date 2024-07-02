@@ -16,6 +16,9 @@ spec:
       containers:
       - name: api-store-image
         image: api-store-image:latest
+        envFrom:
+        - configMapRef:
+            name: app-variables
         ports:
         - containerPort: 8000
           hostPort: 80
@@ -23,9 +26,6 @@ spec:
         - name: gcp-service-account
           mountPath: /var/secrets/google
           readOnly: true
-        envFrom:
-          - configMapRef:
-            name: app-variables
       volumes:
       - name: gcp-service-account
         secret:

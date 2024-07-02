@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: app-variables
+  namespace: default
 data:
   PROJECT_ID: 'hazel-sky-254210'
   DATABASE_ID: 'api-store'
