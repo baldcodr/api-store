@@ -17,7 +17,7 @@ This project is a simple CI/CD pipeline to deploy a containerised FastAPI projec
 9. Kubernetes deployment using kustomize
 
 # Architecture diagram
-api-store-project[]
+api-store-project[docs/api-store-architecture.drawio.png]
 
 # Local setup using docker
 1. Clone the repository and cd in to the project folder
