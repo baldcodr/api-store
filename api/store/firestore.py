@@ -53,5 +53,6 @@ def get_document_by_id(collection_name, document_id):
     except Exception as e:
         print(f'Error getting document: {e}')
         return None
-
+if __name__== '__init__':
+    print("App running...")
 
