@@ -1,6 +1,9 @@
 # About
 This project is a simple CI/CD pipeline to deploy a containerised FastAPI project.
 
+# Threat Model for the System
+A simple threat model has been developed and can ne accessed [here](https://github.com/baldcodr/api-store/blob/main/docs/ThreatModel.md)
+
 # Components
 1. REST API framework - FastAPI
 2. Backend - Cloud Firestore 
